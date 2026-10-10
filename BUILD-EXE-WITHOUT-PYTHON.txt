@@ -1,0 +1,16 @@
+COD AI ANALYST — Build the Windows EXE without installing Python on your PC
+
+This package uses GitHub Actions to build on a hosted Windows machine. You do not need Python installed locally, but you do need a GitHub account and to upload this project as a repository.
+
+1. Sign in to https://github.com/ and create a NEW repository. A private repository is fine.
+2. Upload all files and folders inside this COD_AI_Analyst folder, including the hidden .github/workflows/build-windows-exe.yml file. If the GitHub web upload does not show hidden folders, create the .github/workflows folders in the repository and add build-windows-exe.yml there.
+3. Open the repository's Actions tab.
+4. Select “Build Windows EXE” and click “Run workflow”.
+5. Wait for the workflow to finish. Under Artifacts, download COD_AI_ANALYST_Windows_EXE.
+6. Extract the ZIP on your Windows PC and run COD_AI_ANALYST.exe from the extracted COD_AI_ANALYST folder.
+
+Important:
+- This workflow is a build recipe, not a prebuilt EXE. It must run successfully on GitHub Actions first.
+- The app may need internet access on first use to download the YOLO model weights.
+- Windows security software may inspect or block newly built executables. Do not disable antivirus; check any detection before running it.
+- Streamlit/PyInstaller packaging can require fixes. If the build fails, share the error log and we can adjust the build.
